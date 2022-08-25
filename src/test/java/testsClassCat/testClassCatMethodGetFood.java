@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
-public class C {
+public class testClassCatMethodGetFood {
     @Mock
     Feline feline;
 
