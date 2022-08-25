@@ -19,5 +19,4 @@ public class TestClassCatMethodGetSound {
         assertEquals("Мяу", cat.getSound());
         System.out.println("Кошка говорит " + cat.getSound());
     }
-
 }

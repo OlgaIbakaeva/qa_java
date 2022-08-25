@@ -19,5 +19,8 @@ public class TestClassCatMethodGetFood {
         Cat cat = new Cat(feline);
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Рыбы", "Птицы"));
         System.out.println("Кошка питается, как хищник: " + cat.getFood());
+        if (cat.getFood() == null) {
+            throw new Exception();
+        }
     }
 }
