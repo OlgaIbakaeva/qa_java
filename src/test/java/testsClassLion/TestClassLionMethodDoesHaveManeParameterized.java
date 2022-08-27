@@ -13,7 +13,7 @@ public class TestClassLionMethodDoesHaveManeParameterized {
     private final String checkedSex;
     private final boolean expectedIs;
 
-    public TestClassLionMethodDoesHaveManeParameterized(String checkedSex, boolean expectedIs) throws Exception {
+    public TestClassLionMethodDoesHaveManeParameterized(String checkedSex, boolean expectedIs) {
         this.checkedSex = checkedSex;
         this.expectedIs = expectedIs;
     }
@@ -22,13 +22,12 @@ public class TestClassLionMethodDoesHaveManeParameterized {
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Самец", true},
-                {"Пол не определен", false},
                 {"Самка", false}
         };
     }
 
     @Test
-    public  void TestMethodDoesHaveManeParameterized() throws Exception {
+    public  void TestMethodDoesHaveManeParameterized() throws Exception { // Обработка исключения в классе Lion
         Feline feline = new Feline();
         Lion lion = new Lion(checkedSex, feline);
         assertEquals(expectedIs,lion.doesHaveMane());
