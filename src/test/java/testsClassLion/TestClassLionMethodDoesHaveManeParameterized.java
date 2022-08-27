@@ -32,9 +32,6 @@ public class TestClassLionMethodDoesHaveManeParameterized {
         Feline feline = new Feline();
         Lion lion = new Lion(checkedSex, feline);
         assertEquals(expectedIs,lion.doesHaveMane());
-        if (!checkedSex.equals("Самец") && !checkedSex.equals("Самка")) {
-            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
-        }
         System.out.println("Если пол " + checkedSex + ", то возвращается " + lion.doesHaveMane());
     }
 }
