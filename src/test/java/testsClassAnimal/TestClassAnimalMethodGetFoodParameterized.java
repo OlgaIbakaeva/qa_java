@@ -22,8 +22,7 @@ public class TestClassAnimalMethodGetFoodParameterized {
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Травоядное", List.of("Трава", "Различные растения")},
-                {" ", List.of(" ")},
-                {"Хищник", List.of("Животные", "Птицы", "Рыба")}
+                {"Хищник", List.of("Животные", "Птицы", "Рыба")},
         };
     }
 
