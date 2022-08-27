@@ -22,6 +22,7 @@ public class TestClassAnimalMethodGetFoodParameterized {
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Травоядное", List.of("Трава", "Различные растения")},
+                {" ", List.of(" ")},
                 {"Хищник", List.of("Животные", "Птицы", "Рыба")}
         };
     }
@@ -31,6 +32,9 @@ public class TestClassAnimalMethodGetFoodParameterized {
         Animal animal = new Animal();
         assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
         System.out.println("Тип животного " + checkedAnimalKind + " питается " + animal.getFood(checkedAnimalKind));
+        if (!checkedAnimalKind.equals("Травоядное") && !checkedAnimalKind.equals("Хищник")) {
+            throw new Exception();
+        }
     }
 }
 
