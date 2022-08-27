@@ -22,6 +22,7 @@ public class TestClassLionMethodDoesHaveManeParameterized {
     public static Object[][] getTestData() {
         return new Object[][] {
                 {"Самец", true},
+                {"Пол не определен", false},
                 {"Самка", false}
         };
     }
