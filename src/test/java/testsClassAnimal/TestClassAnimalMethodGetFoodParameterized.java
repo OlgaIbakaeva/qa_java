@@ -32,9 +32,6 @@ public class TestClassAnimalMethodGetFoodParameterized {
         Animal animal = new Animal();
         assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
         System.out.println("Тип животного " + checkedAnimalKind + " питается " + animal.getFood(checkedAnimalKind));
-        if (!checkedAnimalKind.equals("Травоядное") && !checkedAnimalKind.equals("Хищник")) {
-            throw new Exception();
-        }
     }
 }
 
