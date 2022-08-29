@@ -1,4 +1,4 @@
-package testsClassLion;
+package testsclasslion;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -20,7 +20,6 @@ public class TestClassLionMethodGetKittens {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getKittens()).thenReturn(1);
         assertEquals(1, lion.getKittens());
-        System.out.println("У льва " + lion.getKittens() + " котёнок");
         if (lion.getKittens() != 1) {
             throw new Exception();
         }

@@ -1,4 +1,4 @@
-package testsClassAnimal;
+package testsclassanimal;
 
 import com.example.Animal;
 import org.junit.Test;
@@ -30,7 +30,6 @@ public class TestClassAnimalMethodGetFoodParameterized {
     public void TestMethodGetFoodParameterized() throws Exception {
         Animal animal = new Animal();
         assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
-        System.out.println("Тип животного " + checkedAnimalKind + " питается " + animal.getFood(checkedAnimalKind));
     }
 }
 

@@ -1,4 +1,4 @@
-package testsClassCat;
+package testsclasscat;
 
 import com.example.Cat;
 import com.example.Feline;
@@ -8,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
-import static org.junit.Assert.assertEquals;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestClassCatMethodGetFood {
@@ -18,10 +17,10 @@ public class TestClassCatMethodGetFood {
     @Test
     public void testMethodGetFood() throws Exception {
         Cat cat = new Cat(feline);
+        // Заглушка метода eatMeat() из родительского класса feline
         Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        System.out.println("Кошка питается, как хищник: " + cat.getFood());
-        assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
-        if (cat.getFood() == null) {
+        // Проверка, что метод cat.getFood() возвращает нужный список еды
+        if (!(cat.getFood().equals(List.of("Животные", "Птицы", "Рыба")))) {
             throw new Exception();
         }
     }
