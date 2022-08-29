@@ -1,4 +1,4 @@
-package testsClassLion;
+package testsclasslion;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -31,6 +31,5 @@ public class TestClassLionMethodDoesHaveManeParameterized {
         Feline feline = new Feline();
         Lion lion = new Lion(checkedSex, feline);
         assertEquals(expectedIs,lion.doesHaveMane());
-        System.out.println("Если пол " + checkedSex + ", то возвращается " + lion.doesHaveMane());
     }
 }

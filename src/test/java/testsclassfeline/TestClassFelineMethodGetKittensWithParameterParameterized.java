@@ -1,4 +1,4 @@
-package testsClassFeline;
+package testsclassfeline;
 
 import com.example.Feline;
 import org.junit.Test;
@@ -32,6 +32,5 @@ public class TestClassFelineMethodGetKittensWithParameterParameterized {
     public void TestMethodGetKittensWithParameterParameterized() {
         Feline feline = new Feline();
         assertEquals(expectedNumber,feline.getKittens(checkedNumber));
-        System.out.println("При параметре " + feline.getKittens(checkedNumber) + " в семействе кошачьих " + expectedNumber + " котят");
     }
 }

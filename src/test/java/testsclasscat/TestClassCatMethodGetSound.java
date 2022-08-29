@@ -1,4 +1,4 @@
-package testsClassCat;
+package testsclasscat;
 
 import com.example.Cat;
 import com.example.Feline;
@@ -17,6 +17,5 @@ public class TestClassCatMethodGetSound {
     public void testMethodGetSound() {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
-        System.out.println("Кошка говорит " + cat.getSound());
     }
 }
