@@ -1,10 +1,9 @@
-package testsClassLion;
+package testsclasslion;
 
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.junit.Assert.assertEquals;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
@@ -27,10 +26,11 @@ public class TestClassLionMethodDoesHaveManeParameterized {
     }
 
     @Test
-    public  void TestMethodDoesHaveManeParameterized() throws Exception { // Обработка исключения в классе Lion
+    public  void TestMethodDoesHaveManeParameterized() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion(checkedSex, feline);
-        assertEquals(expectedIs,lion.doesHaveMane());
-        System.out.println("Если пол " + checkedSex + ", то возвращается " + lion.doesHaveMane());
+        if (lion.doesHaveMane() != expectedIs) {
+            throw new Exception();
+        }
     }
 }

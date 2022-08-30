@@ -1,10 +1,9 @@
-package testsClassAnimal;
+package testsclassanimal;
 
 import com.example.Animal;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 @RunWith(Parameterized.class)
@@ -29,8 +28,9 @@ public class TestClassAnimalMethodGetFoodParameterized {
     @Test
     public void TestMethodGetFoodParameterized() throws Exception {
         Animal animal = new Animal();
-        assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
-        System.out.println("Тип животного " + checkedAnimalKind + " питается " + animal.getFood(checkedAnimalKind));
+        if (!(animal.getFood(checkedAnimalKind).equals(expectedListFood))) {
+            throw new Exception();
+        }
     }
 }
 
