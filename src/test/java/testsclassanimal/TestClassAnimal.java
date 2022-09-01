@@ -4,10 +4,10 @@ import com.example.Animal;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class TestClassAnimalMethodGetFamily {
+public class TestClassAnimal {
 
     @Test
-    public void testMethodGetSound() {
+    public void testMethodGetFamily() {
         Animal animal = new Animal();
         assertEquals("Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
     }

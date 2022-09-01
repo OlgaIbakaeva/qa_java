@@ -5,14 +5,15 @@ import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestClassLionMethodDoesHaveManeParameterized {
+public class TestClassLionParameterized {
 
     private final String checkedSex;
     private final boolean expectedIs;
 
-    public TestClassLionMethodDoesHaveManeParameterized(String checkedSex, boolean expectedIs) {
+    public TestClassLionParameterized(String checkedSex, boolean expectedIs) {
         this.checkedSex = checkedSex;
         this.expectedIs = expectedIs;
     }
@@ -29,8 +30,6 @@ public class TestClassLionMethodDoesHaveManeParameterized {
     public  void TestMethodDoesHaveManeParameterized() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion(checkedSex, feline);
-        if (lion.doesHaveMane() != expectedIs) {
-            throw new Exception();
-        }
+        assertEquals(expectedIs, lion.doesHaveMane());
     }
 }

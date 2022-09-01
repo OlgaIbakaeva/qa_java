@@ -2,17 +2,17 @@ package testsclassfeline;
 
 import com.example.Feline;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestClassFelineMethodGetKittensWithParameterParameterized {
+public class TestClassFelineParameterized {
 
     private final int checkedNumber;
     private final int expectedNumber;
 
-    public TestClassFelineMethodGetKittensWithParameterParameterized(int checkedNumber, int expectedNumber) {
+    public TestClassFelineParameterized(int checkedNumber, int expectedNumber) {
         this.checkedNumber = checkedNumber;
         this.expectedNumber = expectedNumber;
     }
@@ -34,3 +34,4 @@ public class TestClassFelineMethodGetKittensWithParameterParameterized {
         assertEquals(expectedNumber,feline.getKittens(checkedNumber));
     }
 }
+

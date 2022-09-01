@@ -2,17 +2,18 @@ package testsclassanimal;
 
 import com.example.Animal;
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import java.util.List;
 
 @RunWith(Parameterized.class)
-public class TestClassAnimalMethodGetFoodParameterized {
+public class TestClassAnimalParameterized {
 
     private final String checkedAnimalKind;
     private final List<String> expectedListFood;
 
-    public TestClassAnimalMethodGetFoodParameterized(String checkedAnimalKind, List<String> expectedListFood) {
+    public TestClassAnimalParameterized(String checkedAnimalKind, List<String> expectedListFood) {
         this.checkedAnimalKind = checkedAnimalKind;
         this.expectedListFood = expectedListFood;
     }
@@ -28,9 +29,7 @@ public class TestClassAnimalMethodGetFoodParameterized {
     @Test
     public void TestMethodGetFoodParameterized() throws Exception {
         Animal animal = new Animal();
-        if (!(animal.getFood(checkedAnimalKind).equals(expectedListFood))) {
-            throw new Exception();
-        }
+        assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
     }
 }
 
